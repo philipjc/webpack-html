@@ -1,6 +1,10 @@
 let component = require('./component');
-let app = document.createElement('div');
 
-document.body.appendChild(app);
+run();
 
-app.appendChild(component());
+function run() {
+  let app = document.createElement('div');
+  document.body.appendChild(app);
+  app.appendChild(component());
+};
+
