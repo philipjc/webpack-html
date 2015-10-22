@@ -18,11 +18,7 @@ var common = {
 
   module: {
     loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['style', 'css'],
-        include: path.resolve(ROOT_PATH, 'app')
-      }
+      { test: /\.css$/, loaders: ['style', 'css'], include: path.resolve(ROOT_PATH, 'app') }
     ]
   },
 
@@ -33,16 +29,12 @@ var common = {
   ]
 };
 
-if(TARGET === 'start' || !TARGET) {
+if (TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devtool: 'eval',
     module: {
       loaders: [
-        {
-          test: /\.js?$/,
-          loaders: ['babel'],
-          include: path.resolve(ROOT_PATH, 'app')
-        }
+        { test: /\.js?$/, loaders: ['babel'], include: path.resolve(ROOT_PATH, 'app') }
       ]
     },
     devServer: {
