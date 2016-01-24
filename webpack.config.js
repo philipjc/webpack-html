@@ -1,7 +1,8 @@
 var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack');
 var merge = require('webpack-merge');
+var webpack = require('webpack');
+
 
 /* Using resolve rather than join() is the same as navigating to a file with cd,
     And seen as though webpack likes absolute paths, this is good.
