@@ -35,7 +35,13 @@ if (TARGET === 'start' || !TARGET) {
     devtool: 'eval',
     module: {
       loaders: [
-        { test: /\.js?$/, loaders: ['babel'], include: path.resolve(ROOT_PATH, 'app') }
+        {
+          test: /\.js?$/,
+          loader: 'babel',
+          query: {
+            presets: ['es2015']
+          },
+          include: path.resolve(ROOT_PATH, 'app') }
       ]
     },
     devServer: {
