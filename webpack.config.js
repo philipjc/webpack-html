@@ -19,13 +19,19 @@ var common = {
 
   module: {
     loaders: [
-      { test: /\.css$/, loaders: ['style', 'css'], include: path.resolve(ROOT_PATH, 'app') }
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+        include: path.resolve(ROOT_PATH, 'app')
+      }
     ]
   },
 
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'App'
+      title: 'Project',
+      template: './templates/index.html',
+      inject: 'body',
     })
   ]
 };
