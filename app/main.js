@@ -1,4 +1,4 @@
-import './style/_app.css';
+// import './style/_app.scss';
 import component from './component';
 
 run();
